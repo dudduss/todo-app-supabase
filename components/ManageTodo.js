@@ -80,13 +80,12 @@ const ManageTodo = ({ isOpen, onClose, initialRef, todo, setTodo }) => {
       isOpen={isOpen}
       onClose={onClose}
       isCentered
-      finalFocusRef={initialRef}
-      blockScrollOnMount={false}
+      initialFocusRef={initialRef}
     >
       <ModalOverlay />
       <ModalContent>
         <form onSubmit={submitHandler}>
-          <ModalHeader>{todo ? "Update Todo" : "Adds Todo"}</ModalHeader>
+          <ModalHeader>{todo ? "Update Todo" : "Add Todo"}</ModalHeader>
           <ModalCloseButton onClick={closeHandler} />
           <ModalBody pb={6}>
             {errorMessage && (
